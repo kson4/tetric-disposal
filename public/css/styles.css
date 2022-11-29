@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+li {
+  list-style-type: none;
+}
+body {
+  overflow-x: hidden;
+}
+:root {
+  --primary: #eb6440;
+  --secondary: #497174;
+  --tertiary: #d6e4e5;
+}
+
+/* NAV */
+
+/* mobile */
+
+/* small tablet */
+@media screen and (min-width: 620px) {
+}
+
+/* large tablet */
+@media screen and (min-width: 960px) {
+}
+
+/* desktop */
+@media screen and (min-width: 1200px) {
+}
