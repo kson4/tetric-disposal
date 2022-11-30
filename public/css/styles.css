@@ -27,6 +27,8 @@ body {
   text-transform: uppercase;
   box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.6);
   display: inline-block;
+  cursor: pointer;
+  margin-top: 0.5rem;
 }
 .btn:hover {
   color: #fff;
@@ -40,12 +42,6 @@ input {
   border: 2px solid var(--primary);
   /* color: #f2f2f2; */
 }
-/* h1,
-h2,
-h3,
-h4 {
-  color: var(--primary);
-} */
 h1,
 h3 {
   font-size: 1.2em;
@@ -58,9 +54,11 @@ h4 {
   font-size: 1.1em;
   color: var(--primary);
 }
-
 .leading {
   font-size: 1.1em;
+}
+.center {
+  text-align: center;
 }
 
 /* mobile */
@@ -74,6 +72,9 @@ h4 {
   background-color: var(--primary);
   color: #fff;
   align-items: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 .site-nav ul,
 .site-nav li {
@@ -81,12 +82,20 @@ h4 {
   height: 0;
 }
 
+/* .site-nav li a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  float: right;
+} */
+
 .site-nav p {
   grid-row: 1;
   grid-column: 1/4;
 }
 .fa-bars {
   grid-column: 9/9;
+  cursor: pointer;
 }
 
 /* HERO */
@@ -175,6 +184,9 @@ h4 {
   padding: 0 2rem;
   grid-column: 2/8;
 }
+.contact-form > div {
+  text-align: center;
+}
 .contact-form input {
   width: 100%;
   padding: 1rem;
@@ -182,36 +194,29 @@ h4 {
 }
 
 /* FOOTER */
+footer {
+  background-color: var(--primary);
+  margin-top: 3rem;
+  color: white;
+  text-align: center;
+}
+.col1,
+.col2 {
+  grid-row: 1;
+  padding: 0.5rem;
+}
+.col1 {
+  grid-column: 2/5;
+}
+.col2 {
+  grid-column: 5/8;
+}
 .copyright {
+  grid-row: 2;
   grid-column: 1/9;
   text-align: center;
-  background-color: var(--primary);
-  padding: 1rem;
-  color: white;
-  margin-top: 3rem;
+  padding: 0.5rem;
 }
-
-/* .services {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.2em;
-  padding: 1.2em;
-}
-.services li {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1.2em;
-  border: 1px solid var(--primary);
-  border-radius: 10px;
-  background-color: var(--tertiary);
-  padding: 1.2em;
-}
-.services > li > img {
-  height: 75%;
-  max-width: 100%;
-} */
 
 /* small tablet */
 @media screen and (min-width: 620px) {
