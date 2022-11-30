@@ -20,7 +20,8 @@ body {
 .btn {
   background: none;
   border: 2px solid var(--primary);
-  color: var(--primary);
+  background-color: var(--primary);
+  color: #fff;
   padding: 6px 12px;
   border-radius: 20px;
   text-transform: uppercase;
@@ -72,16 +73,20 @@ h4 {
   padding: 1em;
   background-color: var(--primary);
   color: #fff;
+  align-items: center;
 }
+.site-nav ul,
 .site-nav li {
-  display: none;
+  visibility: hidden;
+  height: 0;
 }
+
 .site-nav p {
-  grid-column: 6/9;
-  text-align: end;
+  grid-row: 1;
+  grid-column: 1/4;
 }
 .fa-bars {
-  align-self: center;
+  grid-column: 9/9;
 }
 
 /* HERO */
@@ -122,7 +127,7 @@ h4 {
   grid-column: 1/9;
   grid-row: 1;
   text-align: center;
-  margin: 0.5rem;
+  margin-bottom: 1rem;
   color: var(--secondary);
 }
 .company-text-summary {
@@ -210,6 +215,29 @@ h4 {
 
 /* small tablet */
 @media screen and (min-width: 620px) {
+  /* nav */
+  .fa-bars {
+    visibility: collapse;
+  }
+  .site-nav ul {
+    grid-row: 1;
+    visibility: visible;
+    display: flex;
+    grid-column: 4/9;
+    align-items: center;
+    gap: 1rem;
+    height: 100%;
+  }
+  .site-nav li {
+    visibility: visible;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+  }
+  .site-nav > ul > li > a {
+    color: #fff;
+  }
 }
 
 /* large tablet */
@@ -217,11 +245,81 @@ h4 {
   body {
     font-size: 18px;
   }
+  h1 {
+    font-size: 1.5em;
+  }
+  #home {
+    padding: 10rem 0;
+  }
+
+  #company {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  .company-text-skills > div {
+    padding: 5rem 2rem;
+  }
+
+  .services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    padding: 1.2rem;
+  }
+  .services li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2em;
+    border: 1px solid var(--primary);
+    border-radius: 10px;
+    background-color: var(--tertiary);
+    padding: 1.2em;
+  }
+
+  #contact {
+    /* padding: 0 2rem; */
+    grid-column: 4/6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact-form {
+    width: 50%;
+  }
+  .contact-form input {
+    width: 100%;
+    padding: 1rem;
+    margin: 0.25rem 0;
+  }
 }
 
 /* desktop */
 @media screen and (min-width: 1200px) {
   body {
     font-size: 20px;
+  }
+
+  #company {
+    padding-left: 10rem;
+    padding-right: 10rem;
+    padding-bottom: 3rem;
+  }
+  .company-header {
+    padding: 3rem;
+  }
+  .company-text-skills {
+    padding: 2rem;
+  }
+
+  #services {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .contact-form {
+    width: 40%;
   }
 }
