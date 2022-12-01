@@ -50,9 +50,6 @@ h4 {
   font-size: 1.1em;
   color: var(--primary);
 }
-p {
-  color: #2f2f2f;
-}
 .white-outline {
   text-shadow: 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff;
 }
@@ -124,6 +121,13 @@ p {
   padding: 0 1rem;
   text-shadow: 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff;
 }
+.hero-btns {
+  grid-row: 4;
+  grid-column: 2/8;
+  display: flex;
+  gap: 2rem;
+  height: 4rem;
+}
 
 #company {
   display: grid;
@@ -144,28 +148,13 @@ p {
 }
 .company-text-step {
   display: flex;
+  margin-bottom: 1rem;
 }
 .fa-circle-dot {
   color: var(--primary);
   margin-top: 0.25rem;
   margin-right: 0.5rem;
 }
-
-/* .company-text-skills {
-  grid-column: 1/8;
-  text-align: center;
-  border: 1px solid red;
-}
-
-.company-text-skills h3 {
-  width: 100%;
-  grid-row: 1;
-  grid-column: 1/6;
-}
-.company-l1,
-.company-l2 {
-  grid-row: 2;
-} */
 
 .company-text-skills {
   padding: 1rem 0;
@@ -178,19 +167,33 @@ p {
 .company-text-skills {
   grid-column: 1/9;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0.25rem;
+  /* grid-template-columns: repeat(2, 1fr); */
+  gap: 0.15rem;
   background-color: var(--secondary);
-  color: white;
 }
 .company-text-skills div {
+  grid-column: 1/9;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+.company-text-skills h4 {
+  margin-bottom: 1rem;
+}
+.company-l1 {
+  grid-row: 1;
+}
+.company-l2 {
   grid-row: 2;
-  padding: 0 1rem;
+}
+/* .company-text-skills div {
+  grid-row: 2;
+  margin: 0 0.5rem;
   text-align: center;
 }
 .company-text-skills > div > h4 {
   padding-bottom: 1rem;
-}
+} */
 
 /* SERVICES */
 #services {
